@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: ${DATABASE_USER:root}
+    password: ${DATABASE_PASSWORD:root}
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3006}/QUINIELAS?jdbcCompliantTruncation=false
+  jpa:
+    hibernate.ddl-auto: update 
+    generate-ddl: true
+    show-sql: true
+server:
+  servlet:
+    context-path: /quinielas/api
+  error:
+    include-stacktrace: never
+  port: 8081    
